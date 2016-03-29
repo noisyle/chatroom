@@ -12,16 +12,21 @@ import com.noisyle.chatroom.vo.ChatMessage;
 @Controller
 public class ChatRoomController {
 	private static Logger logger = LoggerFactory.getLogger(ChatRoomController.class);
-
+	
 	@RequestMapping("/")
 	public String index() {
-		return "chat";
+		return "index";
+	}
+
+	@RequestMapping("/home.html")
+	public String home() {
+		return "home";
 	}
 
 	@MessageMapping("/hello")
 	@SendTo("/topic/hello")
 	public ChatMessage hello(ChatMessage msg) throws Exception {
-		logger.info(msg.getNickname() + " say: " + msg.getMsg());
+		logger.info(msg.getNickname() + ": " + msg.getMsg());
 		return msg;
 	}
 

@@ -6,8 +6,8 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>ChatRoom</title>
-    <script src="static/js/sockjs-0.3.4.js"></script>
-    <script src="static/js/stomp.js"></script>
+    <script src="static/sockjs/sockjs-0.3.4.js"></script>
+    <script src="static/sockjs/stomp.js"></script>
     <script type="text/javascript">
 	
         var nickname = null;
