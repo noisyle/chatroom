@@ -1,5 +1,5 @@
 'use strict';
-var myApp = angular.module('myApp', ['ngAnimate', 'ui.router', 'ui.bootstrap', 'uiRouterStyles', 'myCtrl']);
+var myApp = angular.module('myApp', ['ngAnimate', 'ui.router', 'ui.bootstrap', 'uiRouterStyles', 'ngStomp', 'myCtrl']);
 myApp.config(['$stateProvider', '$urlRouterProvider',  '$locationProvider', '$httpProvider', 
     function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
   $locationProvider.html5Mode(false);
@@ -9,7 +9,7 @@ myApp.config(['$stateProvider', '$urlRouterProvider',  '$locationProvider', '$ht
   	url: "/home",
   	templateUrl: "home.html",
   	data: {
-  	  pageTitle: "首页",
+  	  pageTitle: "Chat",
   	  css: "static/site/css/home.css"
   	},
   	controller: "HomeCtrl"
@@ -67,7 +67,7 @@ myApp.directive('title', ['$rootScope', '$timeout',
           $timeout(function() {
             $rootScope.title = (toState.data && toState.data.pageTitle) 
             ? toState.data.pageTitle 
-            : '首页';
+            : 'Chat';
           });
         };
         $rootScope.$on('$stateChangeSuccess', listener);
@@ -75,3 +75,4 @@ myApp.directive('title', ['$rootScope', '$timeout',
     };
   }
 ]);
+

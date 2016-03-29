@@ -23,7 +23,7 @@ public class ChatRoomController {
 		return "home";
 	}
 
-	@MessageMapping("/hello")
+	@MessageMapping("/chat")
 	@SendTo("/topic/hello")
 	public ChatMessage hello(ChatMessage msg) throws Exception {
 		logger.info(msg.getNickname() + ": " + msg.getMsg());

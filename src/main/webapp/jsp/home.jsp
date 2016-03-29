@@ -9,10 +9,10 @@
   </div>
   <div class="box-body">
     <div class="direct-chat-messages">
-      <div class="direct-chat-msg" ng-repeat="message in messages" ng-class="{'right': message.nickname=='张三'}">
+      <div class="direct-chat-msg" ng-repeat="message in messages" ng-class="{'right': message.nickname==nickname}">
         <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name" ng-bind="message.nickname" ng-class="{true: 'pull-right', false: 'pull-left'}[message.nickname=='张三']"></span>
-          <span class="direct-chat-timestamp" ng-bind="message.timestamp | date:'HH:mm:ss'" ng-class="{true: 'pull-left', false: 'pull-right'}[message.nickname=='张三']"></span>
+          <span class="direct-chat-name" ng-bind="message.nickname" ng-class="{true: 'pull-right', false: 'pull-left'}[message.nickname==nickname]"></span>
+          <span class="direct-chat-timestamp" ng-bind="message.timestamp | date:'HH:mm:ss'" ng-class="{true: 'pull-left', false: 'pull-right'}[message.nickname==nickname]"></span>
         </div>
         <img class="direct-chat-img" ng-src="{{message.avatar}}" alt="message user image">
         <div class="direct-chat-text" ng-bind="message.msg">

@@ -25,6 +25,7 @@
 <script src="http://cdn.bootcss.com/stomp.js/2.3.3/stomp.min.js"></script>
 <script src="static/ui-router-styles/ui-router-styles.js"></script>
 <script src="static/site/js/controller.js"></script>
+<script src="static/site/js/provider.js"></script>
 <script src="static/site/js/app.js"></script>
 </body>
 </html>
