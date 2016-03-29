@@ -15,7 +15,7 @@
 <link href="static/site/css/index.css" rel="stylesheet">
 </head>
 <body>
-<div ui-view></div>
+<div class="main-view" ui-view></div>
 
 <script src="http://cdn.bootcss.com/angular.js/1.5.0/angular.min.js"></script>
 <script src="http://cdn.bootcss.com/angular.js/1.5.0/angular-animate.min.js"></script>

@@ -1,24 +1,24 @@
-.main {
-    padding: 0;
-    min-height: 100%;
-}
 .box {
     position: relative;
     border-radius: 0px;
     background: #ffffff;
     border-top: 3px solid #d2d6de;
-    margin-bottom: 20px;
-    width: 100%;
+    max-width: 767px;
+    margin: 0 auto;
+    height: 100%;
     box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 }
 .box.box-solid {
     border-top: 0;
 }
 .box-header {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
     color: #444;
     display: block;
     padding: 10px;
-    position: relative;
 }
 .box-header>.fa, .box-header>.glyphicon, .box-header>.ion, .box-header .box-title {
     display: inline-block;
@@ -47,19 +47,12 @@
     background: transparent;
     color: #97a0b3;
 }
-.box-body {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    padding: 10px;
-}
 .direct-chat .box-body {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
     position: relative;
+    height: 100%;
+    border-radius: 0;
     overflow-x: hidden;
-    padding: 0;
+    padding: 40px 0 55px 0;
 }
 .direct-chat-messages, .direct-chat-contacts {
     -webkit-transition: -webkit-transform .5s ease-in-out;
@@ -73,10 +66,11 @@
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
     padding: 10px;
+    height: 100%;
     overflow: auto;
 }
 .direct-chat-msg {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .direct-chat-msg, .direct-chat-text {
@@ -116,6 +110,9 @@
     margin-left: 0;
 }
 .box-footer {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     border-bottom-right-radius: 3px;
