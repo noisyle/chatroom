@@ -11,8 +11,8 @@
     <div class="direct-chat-messages">
       <div class="direct-chat-msg" ng-repeat="message in messages" ng-class="{'right': message.nickname==nickname}">
         <div class="direct-chat-info clearfix">
-          <span class="direct-chat-name" ng-bind="message.nickname" ng-class="{true: 'pull-right', false: 'pull-left'}[message.nickname==nickname]"></span>
-          <span class="direct-chat-timestamp" ng-bind="message.timestamp | date:'HH:mm:ss'" ng-class="{true: 'pull-left', false: 'pull-right'}[message.nickname==nickname]"></span>
+          <span class="direct-chat-name" ng-bind="message.nickname"></span>
+          <span class="direct-chat-timestamp" ng-bind="message.timestamp | date:'HH:mm:ss'"></span>
         </div>
         <img class="direct-chat-img" ng-src="{{message.avatar}}" alt="message user image">
         <div class="direct-chat-text" ng-bind="message.msg">
@@ -22,7 +22,7 @@
   </div>
   <div class="box-footer">
     <div class="input-group">
-      <input type="text" ng-model="input" placeholder="输入信息 ..." class="form-control">
+      <input type="text" ng-model="input" ng-keyup="send($event)" placeholder="输入信息，回车发送" class="form-control" autofocus>
       <span class="input-group-btn">
         <button type="button" class="btn btn-primary btn-flat" ng-click="send()" ng-disabled="!input">发送</button>
       </span>

@@ -52,7 +52,7 @@
     height: 100%;
     border-radius: 0;
     overflow-x: hidden;
-    padding: 40px 0 55px 0;
+    padding: 41px 0 55px 0;
 }
 .direct-chat-messages, .direct-chat-contacts {
     -webkit-transition: -webkit-transform .5s ease-in-out;
@@ -73,19 +73,23 @@
     margin-bottom: 15px;
 }
 
-.direct-chat-msg, .direct-chat-text {
-    display: block;
-}
 .direct-chat-info {
     display: block;
     margin-bottom: 2px;
     font-size: 12px;
 }
 .direct-chat-name {
+	float: left;
     font-weight: 600;
 }
 .direct-chat-timestamp {
+	float: left;
     color: #999;
+    padding: 0 10px;
+}
+.right .direct-chat-name,
+.right .direct-chat-timestamp {
+    float: right;
 }
 .direct-chat-img {
     border-radius: 50%;

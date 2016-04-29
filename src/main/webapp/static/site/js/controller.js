@@ -20,13 +20,20 @@ myCtrl.controller('HomeCtrl', ["$scope", '$rootScope', '$stomp', '$log', functio
 		var subscription = $stomp.subscribe('/topic/hello', function (payload, headers, res) {
 			$scope.messages.push(payload);
 			$scope.$apply()
+			var div = document.querySelector('.direct-chat-messages');
+			if(div.scrollTop + div.offsetHeight < div.scrollHeight){
+				angular.element(div).scrollTop(div.scrollHeight - div.offsetHeight);
+			}
 		}, {
 		})
 	});
 	
 	$scope.input = "";
-	$scope.send = function(){
+	$scope.send = function(e){
 		if(!$scope.input){
+			return;
+		}
+		if(e && e.keyCode != 13){
 			return;
 		}
 		var message = {'nickname': $scope.nickname, 'msg': $scope.input, 'timestamp': new Date(), 'avatar': avatar};

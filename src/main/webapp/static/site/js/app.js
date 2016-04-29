@@ -1,5 +1,5 @@
 'use strict';
-var myApp = angular.module('myApp', ['ngAnimate', 'ui.router', 'ui.bootstrap', 'uiRouterStyles', 'ngStomp', 'myCtrl']);
+var myApp = angular.module('myApp', ['ngAnimate', 'ui.router', 'ui.bootstrap', 'uiRouterStyles', 'duScroll', 'ngStomp', 'myCtrl']);
 myApp.config(['$stateProvider', '$urlRouterProvider',  '$locationProvider', '$httpProvider', 
     function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider){
   $locationProvider.html5Mode(false);
